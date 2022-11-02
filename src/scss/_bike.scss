@@ -1,0 +1,268 @@
+@import "_variables";
+@import "_mixins";
+
+.bike {
+  &__tabs-nav {
+    display: flex;
+  }
+  &__tabs-btn {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include text(22px, 33px, 500, $colorMain);
+    background-color: $colorGrey;
+    border-radius: 20px 20px 0px 0px;
+
+  }
+  &__tabs-btn-svg {
+    display: none;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    color: $colorMain;
+    transition-property: transform;
+    @include transition;
+  }
+  &__tabs-btn.active {
+    @include text(22px, 33px, 500, $colorBlue);
+    background-color: $colorWhite;
+  }
+  &__tabs-content {
+    display: none;
+    padding: 40px 60px;
+    max-width: 846px;
+    background-color: $colorWhite;
+    border-radius: 0px 20px 20px 20px;
+  }
+  &__tabs-content.active {
+    display: block;
+  }
+  &__tabs-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $colorGrey;
+  }
+  &__top-left {
+    margin-right: 15px;
+  }
+  &__top-img {
+    margin-left: -60px;
+    max-width: 358px;
+  }
+  &__top-right {
+    max-width: 425px;
+  }
+  &__top-title {
+    margin-bottom: 20px;
+    @include text(26px, 39px, 700, $colorMain);
+  }
+  &__top-descr {
+    @include text(16px, 24px, 400, $colorText);
+  }
+  &__top-descr:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &__tabs-bottom {
+    margin-top: 40px;
+  }
+  &__bottom-title {
+    margin-bottom: 20px;
+    @include text(18px, 27px, 500, $colorMain);
+  }
+  &__bottom-list {
+    padding-left: 18px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 3fr);
+    gap: 30px;
+  }
+  &__bottom-item {
+    grid-column: span 6;
+    @include text(16px, 24px, 400, $colorText);
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-title {
+    margin-bottom: 20px;
+    @include text(18px, 27px, 500, $colorMain);
+  }
+  &__form-content {
+    display: flex;
+  }
+  &__form-input {
+    padding-left: 16px;
+    width: 100%;
+    min-width: 351px;
+    height: 52px;
+    border: 1px solid $colorGrey;
+    border-radius: 16px;
+    background-color: $colorWhite;
+    @include text(16px, 24px, 400, $colorMain);
+    transition-property: border;
+    @include transition;
+  }
+  &__form-input::placeholder {
+    @include text(16px, 24px, 400, $colorGrey);
+  }
+  &__form-btn {
+    margin-left: 24px;
+    padding: 14px 24px;
+    @include text(16px, 24px, 400, $colorWhite);
+    background-color: $colorBlue;
+    border-radius: 16px;
+    transition-property: background-color;
+    @include transition;
+  }
+  &__bottom-btns {
+    margin-top: 40px;
+    width: 100%;
+    padding: 30px 36px;
+    background-color: $colorWhite;
+    box-shadow: 0px 10px 40px rgba(12, 12, 12, 0.1);
+    border-radius: 20px;
+  }
+  &__bottom-btn-ok {
+    margin-right: 10px;
+    padding: 14px 24px;
+    @include text(16px, 24px, 400, $colorWhite);
+    background-color: $colorBlue;
+    border-radius: 16px;
+    transition-property: background-color;
+    @include transition;
+  }
+  &__bottom-btn-cancel {
+    padding: 14px 24px;
+    @include text(16px, 24px, 400, $colorMain);
+    border-radius: 16px;
+    transition-property: background-color, color;
+    @include transition;
+  }
+  &__bottom-list-woman {
+    padding-left: 0;
+  }
+  &__bottom-item-woman {
+    padding-left: 30px;
+    position: relative;
+  }
+  &__bottom-item-woman::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url("../img/ul-bike.svg");
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bike {
+    &__form-input:hover {
+      border: 1px solid $colorBlue;
+    }
+    &__form-btn:hover,
+    &__bottom-btn-ok:hover {
+      background-color: $colorBlueHover;
+    }
+    &__bottom-btn-cancel:hover {
+      background-color: $colorBlueHover;
+      color: $colorWhite;
+    }
+  }
+}
+
+//active, focus
+.bike {
+  &__form-input:active {
+    border: 1px solid $colorBlue;
+  }
+  &__form-input:focus {
+    border: 1px solid $colorBlue;
+    outline: none;
+  }
+  &__form-btn:active,
+  &__bottom-btn-ok:active {
+    background-color: $colorBlueActive;
+  }
+  &__form-btn:focus-visible,
+  &__bottom-btn-ok:focus-visible {
+    background-color: $colorBlueActive;
+    outline: none;
+  }
+  &__bottom-btn-cancel:active {
+    background-color: $colorBlueActive;
+    color: $colorWhite;
+  }
+  &__bottom-btn-cancel:focus-visible {
+    background-color: $colorBlueActive;
+    color: $colorWhite;
+    outline: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .bike {
+    &__form-input {
+      min-width: max-content;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .bike {
+    &__tabs-top {
+      flex-direction: column;
+    }
+    &__top-left {
+      margin-right: 0;
+    }
+    &__top-img {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+    &__bottom-item {
+      grid-column: span 12;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .bike {
+    &__tabs-nav {
+      flex-direction: column;
+    }
+    &__tabs-btn {
+      margin-bottom: 20px;
+      @include text(20px, 30px, 500, $colorMain);
+      border-radius: 20px;
+    }
+    &__tabs-btn-svg {
+      display: block;
+    }
+    &__tabs-btn.active {
+      @include text(20px, 30px, 500, $colorBlue);
+    }
+    &__tabs-btn.active &__tabs-btn-svg {
+      transform: rotate(180deg);
+      color: $colorBlue;
+    }
+    &__tabs-content {
+      padding: 30px 20px;
+    }
+    &__form-content {
+      flex-direction: column;
+    }
+    &__form-input {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    &__form-btn {
+      margin-left: 0;
+    }
+  }
+}
