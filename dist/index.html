@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Главная</title>
+</head>
+
+
+<body class="body">
+  <header class="header">
+  <h2 class="header__title" style="text-align: center;">я header</h2>
+</header>
+  <main>
+    <section class="bike">
+      <div class="container bike__container">
+        <div class="bike__tabs">
+          <div class="bike__tabs-nav">
+            <button class="bike__tabs-btn active btn-reset" type="button" data-tab="#tab-1">
+              Горный велосипед
+              <svg class="bike__tabs-btn-svg">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="bike__tabs-btn btn-reset" type="button" data-tab="#tab-2">
+              Женский велосипед
+              <svg class="bike__tabs-btn-svg">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="bike__tabs-container">
+            <div class="bike__tabs-content active" id="tab-1">
+              <div class="bike__tabs-top">
+                <div class="bike__top-left">
+                  <picture class="intro__picture">
+                    <source media="(min-width: 651px)" srcset="img/content-img-1.png" />
+                    <source media="(max-width: 650px)" srcset="img/content-img-1-mobile.png" />
+                    <img alt="bike__top-img" class="bike__top-img" src="img/content-img-1.png" />
+                  </picture>
+                </div>
+                <div class="bike__top-right">
+                  <h1 class="bike__top-title title-reset">Велосипед SCHWINN Traveler women 2022</h1>
+                  <p class="bike__top-descr descr-reset">
+                    Женский велосипед со стальной рамой Classic step-true lightweight позволяет девушкам без проблем его
+                    перемещать.
+                  </p>
+                  <p class="bike__top-descr descr-reset">
+                    На данном велосипеде имеется 7 скоростей с переключателями от Shimano, а жесткая вилка обеспечивает
+                    отличную управляемость. Подходит для катания по асфальтированным поверхностям.
+                  </p>
+                </div>
+              </div>
+              <div class="bike__tabs-bottom">
+                <h3 class="bike__bottom-title title-reset">Характеристики</h3>
+                <div class="bike__bottom-content">
+                  <ol class="bike__bottom-list">
+                    <li class="bike__bottom-item">
+                      Двойной обод
+                    </li>
+                    <li class="bike__bottom-item">
+                      Алюминиевый сплав
+                    </li>
+                    <li class="bike__bottom-item">
+                      Колеса диаметром 26 дюймов
+                    </li>
+                    <li class="bike__bottom-item">
+                      Покрышки 26х1,95"
+                    </li>
+                  </ol>
+                  <form class="bike__form" id="form-1">
+                    <h3 class="bike__form-title title-reset">Добавить характеристику</h3>
+                    <div class="bike__form-content">
+                      <div class="bike__form-item">
+                        <input class="bike__form-input req " type="text" id="characteristic-1"
+                          placeholder="Алюминиевый сплав">
+                        <label class="bike__form-label" for="characteristic-1"></label>
+                      </div>
+                      <button class="bike__form-btn btn-reset" type="submit">Добавить</button>
+                    </div>
+                  </form>
+                  <div class="bike__bottom-btns">
+                    <button class="bike__bottom-btn-ok btn-reset" type="button">Окей</button>
+                    <button class="bike__bottom-btn-cancel btn-reset" type="button">Отмена</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bike__tabs-content" id="tab-2">
+              <div class="bike__tabs-top">
+                <div class="bike__top-left">
+                  <picture class="intro__picture">
+                    <source media="(min-width: 651px)" srcset="img/content-img-2.png" />
+                    <source media="(max-width: 650px)" srcset="img/content-img-2-mobile.png" />
+                    <img alt="bike__top-img" class="bike__top-img" src="img/content-img-2.png" />
+                  </picture>
+                </div>
+                <div class="bike__top-right">
+                  <h1 class="bike__top-title title-reset">Велосипед STELS Navigator 510 HD 26 2022</h1>
+                  <p class="bike__top-descr descr-reset">
+                    Данный велосипед с колесами 26 дюймов хорошо подходит высоким подросткам. Прогиб рамы и небольшой
+                    размер рамы расчитан на рост от 135 до 165 см.
+                  </p>
+                  <p class="bike__top-descr descr-reset">
+                    Суммарный вес велосипеда был снижен до 16,9 кг, так как рама была изготовлена с учетом использования
+                    велосипеда подростками.
+                  </p>
+                </div>
+              </div>
+              <div class="bike__tabs-bottom">
+                <h3 class="bike__bottom-title title-reset">Характеристики</h3>
+                <div class="bike__bottom-content">
+                  <ul class="bike__bottom-list bike__bottom-list-woman">
+                    <li class="bike__bottom-item bike__bottom-item-woman">
+                      Двойной обод
+                    </li>
+                    <li class="bike__bottom-item bike__bottom-item-woman">
+                      Алюминиевый сплав
+                    </li>
+                    <li class="bike__bottom-item bike__bottom-item-woman">
+                      Колеса диаметром 26 дюймов
+                    </li>
+                    <li class="bike__bottom-item bike__bottom-item-woman">
+                      Покрышки 26х1,95"
+                    </li>
+                  </ul>
+                  <form class="bike__form" id="form-2">
+                    <h3 class="bike__form-title title-reset">Добавить характеристику</h3>
+                    <div class="bike__form-content">
+                      <div class="bike__form-item">
+                        <input class="bike__form-input req" type="text" id="characteristic-2"
+                          placeholder="Алюминиевый сплав">
+                        <label class="bike__form-label" for="characteristic-1"></label>
+                      </div>
+                      <button class="bike__form-btn btn-reset" type="submit">Добавить</button>
+                    </div>
+                  </form>
+                  <div class="bike__bottom-btns">
+                    <button class="bike__bottom-btn-ok btn-reset" type="button">Окей</button>
+                    <button class="bike__bottom-btn-cancel btn-reset" type="button">Отмена</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <footer class="footer">
+  <h2 class="footer__title" style="text-align: center;">я footer</h2>
+</footer>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
